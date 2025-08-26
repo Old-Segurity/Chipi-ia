@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Añade esto a tu .gitignore
+.env
+*.env
+.env.local
+.env.production
+
+# Archivos de entorno
+environment.yml
+config.yaml
+config.json
+
+# Datos sensibles
+keys.txt
+secrets/*
+credentials/*
