@@ -1,0 +1,16 @@
+[build]
+  publish = "static"
+  functions = "functions"
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/chipi_api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
