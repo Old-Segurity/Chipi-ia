@@ -3,7 +3,7 @@
   functions = "functions"
 
 [build.environment]
-  PYTHON_VERSION = "3.9"
+  PYTHON_VERSION = "3.11"  # Cambiado de 3.9 a 3.11
 
 [[redirects]]
   from = "/api/*"
