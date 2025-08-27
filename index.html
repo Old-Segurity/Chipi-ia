@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPI IA - Asistente para Adultos Mayores</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <button class="btn btn-help" id="help-btn">Ayuda</button>
+            <div class="logo">
+                <h1>CHIPI IA</h1>
+                <p>Vive la seguridad</p>
+            </div>
+            <button class="btn btn-logout" id="logout-btn" style="display: none;">Cerrar Sesión</button>
+        </div>
+        
+        <!-- Alertas -->
+        <div class="alert alert-success" id="success-alert"></div>
+        <div class="alert alert-error" id="error-alert"></div>
+        
+        <!-- Pantalla de Login -->
+        <div class="screen login-screen active" id="login-screen">
+            <div class="form-container">
+                <h2 class="form-title">INICIAR SESIÓN</h2>
+                
+                <div class="form-group">
+                    <label for="login-phone">Número de teléfono</label>
+                    <input type="tel" id="login-phone" placeholder="Ej: 3001234567" inputmode="numeric">
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="Tu contraseña">
+                </div>
+                
+                <button class="btn btn-primary" id="login-btn">INICIAR SESIÓN</button>
+                
+                <button class="btn btn-link" id="goto-register">¿No tienes cuenta? CREAR CUENTA</button>
+                
+                <p style="text-align: center; margin-top: 20px; color: #999; font-size: 14px;">
+                    OLD-SEGURITY Protección sin complicación
+                </p>
+            </div>
+        </div>
+        
+        <!-- Pantalla de Registro -->
+        <div class="screen register-screen" id="register-screen">
+            <div class="form-container">
+                <h2 class="form-title">CREAR CUENTA</h2>
+                <p style="text-align: center; margin-bottom: 20px; color: #ccc;">
+                    Completa la información para crear tu cuenta
+                </p>
+                
+                <div class="form-group">
+                    <label for="register-phone">Número de teléfono (10 dígitos)</label>
+                    <input type="tel" id="register-phone" placeholder="Ej: 3001234567" inputmode="numeric">
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">Contraseña (mínimo 6 caracteres)</label>
+                    <input type="password" id="register-password" placeholder="Tu contraseña segura">
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm">Confirmar contraseña</label>
+                    <input type="password" id="register-confirm" placeholder="Repite tu contraseña">
+                </div>
+                
+                <button class="btn btn-primary" id="register-btn">CREAR MI CUENTA</button>
+                
+                <button class="btn btn-link" id="goto-login">Ya tengo cuenta - INICIAR SESIÓN</button>
+                
+                <p style="text-align: center; margin-top: 20px; color: #999; font-size: 14px;">
+                    OLD-SEGURITY Protección sin complicación
+                </p>
+            </div>
+        </div>
+        
+        <!-- Pantalla de Chat -->
+        <div class="screen chat-screen" id="chat-screen">
+            <div class="welcome-message" id="welcome-message">
+                Hola! Soy Chipi, tu asistente virtual<br><br>
+                Estoy aquí para ayudarte con:<br>
+                • Información sobre aplicaciones<br>
+                • Consejos de ciberseguridad<br>
+                • Recordatorios importantes<br>
+                • Respuestas a tus preguntas<br><br>
+                Puedes hablarme de forma natural, como si fuera tu nieto
+            </div>
+            
+            <div class="chat-area" id="chat-area">
+                <!-- Los mensajes se añadirán aquí dinámicamente -->
+            </div>
+            
+            <div class="input-area">
+                <input type="text" class="message-input" id="message-input" placeholder="Escribe tu mensaje aquí...">
+                <button class="btn btn-send" id="send-btn">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+                                                       </html>
