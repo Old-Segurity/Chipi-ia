@@ -1,8 +1,0 @@
-{
-  "name": "chipi-ia-web",
-  "version": "2.1.0",
-  "description": "Asistente virtual para adultos mayores",
-  "engines": {
-    "node": ">=18"
-  }
-}
