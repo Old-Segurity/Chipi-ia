@@ -1,12 +1,18 @@
-# Agrega estas líneas al inicio
-cffi==1.16.0
+# Versiones específicas que funcionan en Render
 setuptools==69.0.3
+cffi==1.16.0
+wheel==0.43.0
 
+# Dependencias principales
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 requests==2.31.0
-python-multipart==0.0.6
 python-dotenv==1.0.0
-cryptography==42.0.0
-Pillow==10.0.1
 gunicorn==21.2.0
+
+# cryptography con versión compatible
+cryptography==41.0.8  # Versión más estable
+
+# Otras dependencias (opcional, puedes comentarlas temporalmente)
+# Pillow==10.0.1
+# python-multipart==0.0.6
