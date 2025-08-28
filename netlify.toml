@@ -1,4 +1,18 @@
 [build]
-  publish = "public"
-  command = "pip install -r requirements.txt"
-  functions = "functions"
+  command = "npm run build"
+  publish = ".next"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Para API Routes y NextAuth
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Configuración de funciones serverless (para API Routes)
+[functions]
+  node_bundler = "esbuild"
