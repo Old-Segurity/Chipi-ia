@@ -2,17 +2,16 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"  # ← ¡Importante para evitar conflictos!
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Para API Routes y NextAuth
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-
-# Configuración de funciones serverless (para API Routes)
-[functions]
-  node_bundler = "esbuild"
